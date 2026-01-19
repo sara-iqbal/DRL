@@ -1,4 +1,4 @@
-# From Grid Search to Deep Q-Networks: A Reinforcement Learning Journey 🤖
+# Deep Reinforcement Learning: Navigating the MiniGrid World 🤖
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20RL-orange)
