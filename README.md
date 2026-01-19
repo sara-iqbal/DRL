@@ -41,31 +41,31 @@ The project is split into two distinct phases. You can explore the code here:
 ---
 
 ## The 10-Task Challenge
-[cite_start]We structured this project as a progression through 10 specific challenges[cite: 3]:
+We structured this project as a progression through 10 specific challenges:
 
 ### Part 1: Tabular Methods (The "Memory" Approach)
 In the beginning, the environments were small enough that we could store every possible state in a table.
 * **Tasks 1-3 (Dynamic Programming):** We implemented **Value Iteration** and **Policy Iteration** to calculate the mathematical "Ground Truth" (the perfect path).
-* **Tasks 4-6 (Tabular Learning):** We implemented **Q-Learning** (Off-Policy) and **SARSA** (On-Policy). [cite_start]We performed extensive **Hyperparameter Tuning** (Epsilon-Greedy strategies, Learning Rates) to balance exploration vs. exploitation[cite: 3].
+* **Tasks 4-6 (Tabular Learning):** We implemented **Q-Learning** (Off-Policy) and **SARSA** (On-Policy). We performed extensive **Hyperparameter Tuning** (Epsilon-Greedy strategies, Learning Rates) to balance exploration vs. exploitation.
 
 <img width="1048" height="527" alt="image" src="https://github.com/user-attachments/assets/c34bbb1a-5d4f-4fef-a32d-e522cd472af4" />
 
 
 ### Part 2: Deep Reinforcement Learning (The "Brain" Approach)
 When we increased the grid size to 8x8, the number of states exploded. A simple table wasn't enough, so we used Deep Learning to *approximate* the best moves.
-* **Task 7 (DQN):** We built a **Deep Q-Network** using PyTorch. [cite_start]This involved creating a Replay Buffer to store memories and a Target Network to stabilize training[cite: 3].
-* **Task 8 (Double DQN):** Standard DQNs often overestimate how good a move is. [cite_start]We implemented **Double DQN** to decouple action selection from evaluation, leading to more stable learning[cite: 3].
-* [cite_start]**Task 9 (Policy Gradients):** We moved away from Q-values and implemented **REINFORCE**, an algorithm that learns the policy directly[cite: 3].
+* **Task 7 (DQN):** We built a **Deep Q-Network** using PyTorch. This involved creating a Replay Buffer to store memories and a Target Network to stabilize training.
+* **Task 8 (Double DQN):** Standard DQNs often overestimate how good a move is. We implemented **Double DQN** to decouple action selection from evaluation, leading to more stable learning.
+  **Task 9 (Policy Gradients):** We moved away from Q-values and implemented **REINFORCE**, an algorithm that learns the policy directly.
 
 ### Part 3: The Custom Game
-* [cite_start]**Task 10 (Gen-RL):** To prove our agents weren't just memorizing one map, we designed a **Custom Environment** with dynamic obstacles and specific objectives to stress-test the robustness of our algorithms[cite: 3].
+**Task 10 (Gen-RL):** To prove our agents weren't just memorizing one map, we designed a **Custom Environment** with dynamic obstacles and specific objectives to stress-test the robustness of our algorithms.
 
 <img width="467" height="256" alt="image" src="https://github.com/user-attachments/assets/165c7ef2-3177-4676-a0b6-411cd41fafb2" />
 
 ---
 
 ## Key Results
-* **DQN vs. Tabular:** On the 8x8 grid, Tabular Q-learning failed to converge efficiently due to the sparse reward signal. [cite_start]The DQN agent, however, successfully generalized the state space and solved the environment[cite: 3].
+* **DQN vs. Tabular:** On the 8x8 grid, Tabular Q-learning failed to converge efficiently due to the sparse reward signal. The DQN agent, however, successfully generalized the state space and solved the environment.
 * **Stability:** Double DQN provided smoother training curves compared to the volatile learning of the standard DQN.
 
 ---
